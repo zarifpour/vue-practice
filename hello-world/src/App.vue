@@ -1,14 +1,18 @@
 <template>
-  <div>{{greet}} {{ name }}</div>
+  <div>{{ greet }} {{ name }}</div>
+  <div v-html="username"></div>
+  <div v-html="hack"></div>
 </template>
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
       greet: "Howdy",
       name: "Daniel",
+      username: "<b>zarif</b>",
+      hack: `<a href="#" onclick="alert('You have been hacked!')">Win a prize!</a>`,
     };
   },
 };
